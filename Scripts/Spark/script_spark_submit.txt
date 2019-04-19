@@ -1,0 +1,1 @@
+spark-submit --class "com.test.clustering.main" --master local C:\Users\FATMA\Desktop\New\Sbt_scala_spark\target\scala-2.11\SPARK_SBT_TEST-assembly-0.1.jar

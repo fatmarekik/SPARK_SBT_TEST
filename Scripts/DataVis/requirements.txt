@@ -1,0 +1,10 @@
+INSTALL 
+
+pip install folium
+pip install selenium
+pip install pandas 
+pip install seaborn
+pip install matplotlib
+
+DOWNLOADS
+geckodriver.exe file download or use file under Scripts/DataVis
