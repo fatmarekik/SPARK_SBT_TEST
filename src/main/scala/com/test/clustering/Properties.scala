@@ -4,7 +4,7 @@ import com.typesafe.config._
 object Properties {
 
     val config: Config  = ConfigFactory.load()
-    println(config)
+   // println(config)
 
     val input_file = config.getString(("uu.data"))
     val OUTPUT_DIR = config.getString("output.dir")

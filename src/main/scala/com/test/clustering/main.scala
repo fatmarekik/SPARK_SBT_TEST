@@ -16,7 +16,7 @@ object main {
 
     val appName = "Clustering for Brisbane_CityBike"
 
-     println("hello")
+
     val spark = SparkSession.builder()
       .master("local")
       .appName(appName)
