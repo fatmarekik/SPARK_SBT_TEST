@@ -46,6 +46,7 @@ object main {
     // Building the Pipeline for clustering
     // Step 1 : assembling features
     // Step 2 : Running the clustering on data
+
     val pipeline = new Pipeline().setStages(Array(assembler, kmeans))
 
     // Running the clustering pipeline
