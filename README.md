@@ -1,5 +1,5 @@
 # Data Clustering For Brisbane City
-This project is a demonstration for structured project using spark scala sbt and python for data visualisation.
+This project is a demonstration for structured project using spark scala sbt and python for data visualisation.<br />
 The aim of this project is to cluster ***Brisbane_CityBike*** dataset based on ***longitude*** and ***latitude***
 
 ## REQUIREMENTS:
