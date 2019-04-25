@@ -1,5 +1,5 @@
 
-package com.test.clustering
+package com.Datavectis.clustering
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.ml.clustering.KMeans
 import org.apache.spark.ml.Pipeline
@@ -7,53 +7,50 @@ import java.util.logging.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.SaveMode
 
-object main {
+object Main {
 
   //Initialize logging
   val logger = Logger.getLogger(getClass.getName)
 
   def main(args: Array[String]): Unit = {
 
-    val appName = "Clustering for Brisbane_CityBike"
-
-
     val spark = SparkSession.builder()
-      .master("local")
-      .appName(appName)
+      //.master(Properties.Master)
+      .appName(Properties.AppName)
       .getOrCreate()
 
     logger.log(Level.INFO, "Spark context has been initialized with name {0}", spark.sparkContext.appName)
 
 
-    // Preparing the input data
-    val df = spark.read.json(Properties.input_file)
 
-    // Displaying a sample of imported data
-    df.show(10, false)
-    println(Properties.NumberCluster)
-    // Assembling the Vector of input data wish is station positions (latitude and longitude) equivalent to selector
+    logger.log(Level.INFO, "Preaparing the input data")
+    val df = spark.read.json(Properties.INPUT_FILE)
+
+    logger.log(Level.INFO, " Assembling the Vector of input data which is station positions (latitude and longitude) equivalent to selector")
     val assembler = new VectorAssembler()
       .setInputCols(Array("latitude","longitude"))
       .setOutputCol("features")
 
-    // Initializing the KMeans clustering model
+
+    logger.log(Level.INFO, "Initializing the KMeans clustering model")
     val kmeans = new KMeans()
       .setK(Properties.NumberCluster).setSeed(1L)
       .setFeaturesCol("features")
       .setPredictionCol("cluster")
 
 
-    // Building the Pipeline for clustering
     // Step 1 : assembling features
     // Step 2 : Running the clustering on data
-
+    logger.log(Level.INFO, "Building the Pipeline for clustering with {0} clusters" ,Properties.NumberCluster )
     val pipeline = new Pipeline().setStages(Array(assembler, kmeans))
 
     // Running the clustering pipeline
+    logger.log(Level.INFO, "Running the clustering pipeline")
     val model = pipeline.fit(df)
 
 
     // Saving the model
+    logger.log(Level.INFO, "Saving the model")
     model.write
       .overwrite()
       .save(Properties.MODEL_DIR)
@@ -63,6 +60,7 @@ object main {
     val clusters = model.transform(df)
 
     // Saving the dataset with labels and prepare df for dataVis
+    logger.log(Level.INFO, "Saving the  datset with labels and prepare it for Data Visualisation")
     clusters.drop("features")
       .repartition(1)
       .write
