@@ -62,7 +62,7 @@ we can interpret the clusters as north, south, east, west and center.
 The python code also provides a way to capture an image from the html using the selenium package,
 opening a browser window that displays the map, generate a screen grab of it and save the image map.png<br />
 
-![Plotting Data clusters] (https://github.com/fatmarekik/SPARK_SBT_TEST/blob/master/map.png)
+![map.png](https://github.com/fatmarekik/SPARK_SBT_TEST/blob/master/map.png)
 
 
 
