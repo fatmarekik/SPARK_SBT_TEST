@@ -10,8 +10,9 @@ object Properties {
     val OUTPUT_DIR = config.getString("output.dir")
     val MODEL_DIR = config.getString("model.dir")
     val NumberCluster = config.getInt("numberCluster")
-    val AppName = config.getString( "AppName")
-    //val Master = config.getString("Master")
+    val AppName = config.getString( "appName")
+    val Master = config.getString("master")
+
 
 }
 

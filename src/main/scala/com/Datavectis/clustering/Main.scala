@@ -15,7 +15,7 @@ object Main {
   def main(args: Array[String]): Unit = {
 
     val spark = SparkSession.builder()
-      //.master(Properties.Master)
+      .master(Properties.Master)
       .appName(Properties.AppName)
       .getOrCreate()
 
