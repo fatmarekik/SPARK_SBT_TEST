@@ -37,8 +37,8 @@ Before running the project locally , you have to complete the configuration file
 * **model.dir** =  Directory that will be used to store the model generated in case you will need to reuse it again.<br />
 	a folder  DataOutput is created in order to store both of output and model directories.<br />
 * **numberCluster** = the number of cluster for kmeans clustering.<br />
-* **AppName** = the name of the application
-* **Master** = the master URL for the cluster 
+* **appName** = the name of the application
+* **master** = the master URL for the cluster 
 
 ## RUNNING
 For running this project: 
