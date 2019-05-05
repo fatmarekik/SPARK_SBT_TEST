@@ -1,2 +1,2 @@
 #!/bin/sh
-spark-submit --class "com.Datavectis.clustering.Main" --master yarn-cluster --files /home/fatmarekik/SPARK_SBT_TEST/Config/application.properties /home/fatmarekik/SPARK_SBT_TEST/Scripts/Spark/Jars/SPARK_SBT_TEST-assembly-0.1.jar
+spark-submit --class "com.Datavectis.clustering.Main"   --master yarn-cluster --files /home/fatmarekik/SPARK_SBT_Clustering/Config/application.properties /home/fatmarekik/SPARK_SBT_Clustering/Scripts/Jars/SPARK_SBT_TEST-assembly-0.1.jar
