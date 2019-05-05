@@ -11,7 +11,7 @@
             </property>
         </configuration>
         <exec>sparksubmit.sh</exec>
-        <file>/user/fatmarekik/SPARK_SBT_TEST/Scripts/Shell/sparksubmit.sh</file>
+        <file>/user/fatmarekik/SPARK_SBT_Clustering/Scripts/Shell/sparksubmit.sh</file>
     </shell>
     <ok to="end"/>
     <error to="fail"/>
