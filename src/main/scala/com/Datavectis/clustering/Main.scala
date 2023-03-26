@@ -9,6 +9,7 @@ import org.apache.spark.sql.SaveMode
 
 object Main {
 
+  println("This is the main function")
   //Initialize logging
   val logger = Logger.getLogger(getClass.getName)
 
