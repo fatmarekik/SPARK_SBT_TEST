@@ -14,6 +14,8 @@ object Main {
   println("corr evo1")
   println("corr 3 :creation de la branch evo 2")
   println("corr 4 : after branch creation , these are missing commits")
+  println("corr 5 : second modif after branch creation , these are missing commits")
+
   //Initialize logging
   val logger = Logger.getLogger(getClass.getName)
 
