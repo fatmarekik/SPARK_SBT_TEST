@@ -30,7 +30,7 @@ class TestProg extends FunSuite with BeforeAndAfterEach {
 
   //testing clustering
   test("Checking Clustering") {
-
+    println("test modifcation in evo 2")
     val BrisbaneCityBike = spark.read.json("dataInput/data/Brisbane_CityBike.json")
 
     val assembler = new VectorAssembler()
