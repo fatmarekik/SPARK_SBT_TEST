@@ -12,6 +12,7 @@ object Main {
   println("This is the main function in master")
   println("evo1")
   println("corr evo1")
+  println("corr 3 :creation de la branch evo 2")
   //Initialize logging
   val logger = Logger.getLogger(getClass.getName)
 
